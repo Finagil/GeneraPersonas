@@ -5,7 +5,7 @@
       <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection ConnectionStringObject="Data Source=server-raid;Initial Catalog=Production;Persist Security Info=True;User ID=User_PRO;Password=User_PRO2015" IsAppSettingsProperty="false" Modifier="Assembly" Name="server-raid.Production.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
-          <Connection ConnectionStringObject="Data Source=server-raid\;Initial Catalog=Production;Persist Security Info=True;User ID=User_PRO;Password=User_PRO2015" IsAppSettingsProperty="false" Modifier="Assembly" Name="server-raid.Production.dbo1" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Data Source=server-raid2;Initial Catalog=Production;Persist Security Info=True;User ID=User_PRO;Password=User_PRO2015" IsAppSettingsProperty="false" Modifier="Assembly" Name="server-raid.Production.dbo1" ParameterPrefix="@" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AnexosTableAdapter" GeneratorDataComponentClassName="AnexosTableAdapter" Name="Anexos" UserDataComponentName="AnexosTableAdapter">
@@ -38,7 +38,7 @@ ORDER BY Fechacon, AnexoCon</CommandText>
               <Mapping SourceColumn="Tipar" DataSetColumn="Tipar" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtrasoAvio" Modifier="Public" Name="AtrasoAvio" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtrasoAvio">
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtrasoAvio" Modifier="Public" Name="AtrasoAvio" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="AtrasoAvio">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS Expr1
@@ -52,7 +52,7 @@ WHERE        (DetalleFINAGIL.Anexo = @Anexo) AND (DetalleFINAGIL.Ciclo = @Ciclo)
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SadoFactura" Modifier="Public" Name="SadoFactura" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SadoFactura">
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SadoFactura" Modifier="Public" Name="SadoFactura" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SadoFactura">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        ISNULL(SUM(SaldoFac), 0) AS Saldo
@@ -64,7 +64,7 @@ WHERE        (Anexo = @Anexo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SaldoAvio" Modifier="Public" Name="SaldoAvio" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SaldoAvio">
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SaldoAvio" Modifier="Public" Name="SaldoAvio" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="SaldoAvio">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        ISNULL(SUM(Importe), 0) AS Saldo
@@ -77,7 +77,7 @@ WHERE        (Anexo = @Anexo) AND (Ciclo = @Ciclo)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarAtraso" Modifier="Public" Name="ScalarAtraso" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ScalarAtraso">
+              <DbSource ConnectionRef="server-raid.Production.dbo" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ScalarAtraso" Modifier="Public" Name="ScalarAtraso" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ScalarAtraso">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(*) AS Expr1
@@ -468,7 +468,7 @@ FROM            GEN_Avales INNER JOIN
   <xs:element name="ProductionDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ProductionDS" msprop:Generator_UserDSName="ProductionDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Anexos" msprop:Generator_TableClassName="AnexosDataTable" msprop:Generator_TableVarName="tableAnexos" msprop:Generator_RowChangedName="AnexosRowChanged" msprop:Generator_TablePropName="Anexos" msprop:Generator_RowDeletingName="AnexosRowDeleting" msprop:Generator_RowChangingName="AnexosRowChanging" msprop:Generator_RowEvHandlerName="AnexosRowChangeEventHandler" msprop:Generator_RowDeletedName="AnexosRowDeleted" msprop:Generator_RowClassName="AnexosRow" msprop:Generator_UserTableName="Anexos" msprop:Generator_RowEvArgName="AnexosRowChangeEvent">
+        <xs:element name="Anexos" msprop:Generator_TableClassName="AnexosDataTable" msprop:Generator_TableVarName="tableAnexos" msprop:Generator_TablePropName="Anexos" msprop:Generator_RowDeletingName="AnexosRowDeleting" msprop:Generator_RowChangingName="AnexosRowChanging" msprop:Generator_RowEvHandlerName="AnexosRowChangeEventHandler" msprop:Generator_RowDeletedName="AnexosRowDeleted" msprop:Generator_UserTableName="Anexos" msprop:Generator_RowChangedName="AnexosRowChanged" msprop:Generator_RowEvArgName="AnexosRowChangeEvent" msprop:Generator_RowClassName="AnexosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Anexo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAnexo" msprop:Generator_ColumnPropNameInRow="Anexo" msprop:Generator_ColumnPropNameInTable="AnexoColumn" msprop:Generator_UserColumnName="Anexo" minOccurs="0">
@@ -537,7 +537,7 @@ FROM            GEN_Avales INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Opciones" msprop:Generator_TableClassName="OpcionesDataTable" msprop:Generator_TableVarName="tableOpciones" msprop:Generator_TablePropName="Opciones" msprop:Generator_RowDeletingName="OpcionesRowDeleting" msprop:Generator_RowChangingName="OpcionesRowChanging" msprop:Generator_RowEvHandlerName="OpcionesRowChangeEventHandler" msprop:Generator_RowDeletedName="OpcionesRowDeleted" msprop:Generator_UserTableName="Opciones" msprop:Generator_RowChangedName="OpcionesRowChanged" msprop:Generator_RowEvArgName="OpcionesRowChangeEvent" msprop:Generator_RowClassName="OpcionesRow">
+        <xs:element name="Opciones" msprop:Generator_TableClassName="OpcionesDataTable" msprop:Generator_TableVarName="tableOpciones" msprop:Generator_RowChangedName="OpcionesRowChanged" msprop:Generator_TablePropName="Opciones" msprop:Generator_RowDeletingName="OpcionesRowDeleting" msprop:Generator_RowChangingName="OpcionesRowChanging" msprop:Generator_RowEvHandlerName="OpcionesRowChangeEventHandler" msprop:Generator_RowDeletedName="OpcionesRowDeleted" msprop:Generator_RowClassName="OpcionesRow" msprop:Generator_UserTableName="Opciones" msprop:Generator_RowEvArgName="OpcionesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Anexo" msprop:Generator_ColumnVarNameInTable="columnAnexo" msprop:Generator_ColumnPropNameInRow="Anexo" msprop:Generator_ColumnPropNameInTable="AnexoColumn" msprop:Generator_UserColumnName="Anexo">
@@ -567,7 +567,7 @@ FROM            GEN_Avales INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TablaEquipo1" msprop:Generator_TableClassName="TablaEquipo1DataTable" msprop:Generator_TableVarName="tableTablaEquipo1" msprop:Generator_RowChangedName="TablaEquipo1RowChanged" msprop:Generator_TablePropName="TablaEquipo1" msprop:Generator_RowDeletingName="TablaEquipo1RowDeleting" msprop:Generator_RowChangingName="TablaEquipo1RowChanging" msprop:Generator_RowEvHandlerName="TablaEquipo1RowChangeEventHandler" msprop:Generator_RowDeletedName="TablaEquipo1RowDeleted" msprop:Generator_RowClassName="TablaEquipo1Row" msprop:Generator_UserTableName="TablaEquipo1" msprop:Generator_RowEvArgName="TablaEquipo1RowChangeEvent">
+        <xs:element name="TablaEquipo1" msprop:Generator_TableClassName="TablaEquipo1DataTable" msprop:Generator_TableVarName="tableTablaEquipo1" msprop:Generator_TablePropName="TablaEquipo1" msprop:Generator_RowDeletingName="TablaEquipo1RowDeleting" msprop:Generator_RowChangingName="TablaEquipo1RowChanging" msprop:Generator_RowEvHandlerName="TablaEquipo1RowChangeEventHandler" msprop:Generator_RowDeletedName="TablaEquipo1RowDeleted" msprop:Generator_UserTableName="TablaEquipo1" msprop:Generator_RowChangedName="TablaEquipo1RowChanged" msprop:Generator_RowEvArgName="TablaEquipo1RowChangeEvent" msprop:Generator_RowClassName="TablaEquipo1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Anexo" msprop:Generator_ColumnVarNameInTable="columnAnexo" msprop:Generator_ColumnPropNameInRow="Anexo" msprop:Generator_ColumnPropNameInTable="AnexoColumn" msprop:Generator_UserColumnName="Anexo" minOccurs="0">
@@ -631,7 +631,7 @@ FROM            GEN_Avales INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TablaSeguro1" msprop:Generator_TableClassName="TablaSeguro1DataTable" msprop:Generator_TableVarName="tableTablaSeguro1" msprop:Generator_RowChangedName="TablaSeguro1RowChanged" msprop:Generator_TablePropName="TablaSeguro1" msprop:Generator_RowDeletingName="TablaSeguro1RowDeleting" msprop:Generator_RowChangingName="TablaSeguro1RowChanging" msprop:Generator_RowEvHandlerName="TablaSeguro1RowChangeEventHandler" msprop:Generator_RowDeletedName="TablaSeguro1RowDeleted" msprop:Generator_RowClassName="TablaSeguro1Row" msprop:Generator_UserTableName="TablaSeguro1" msprop:Generator_RowEvArgName="TablaSeguro1RowChangeEvent">
+        <xs:element name="TablaSeguro1" msprop:Generator_TableClassName="TablaSeguro1DataTable" msprop:Generator_TableVarName="tableTablaSeguro1" msprop:Generator_TablePropName="TablaSeguro1" msprop:Generator_RowDeletingName="TablaSeguro1RowDeleting" msprop:Generator_RowChangingName="TablaSeguro1RowChanging" msprop:Generator_RowEvHandlerName="TablaSeguro1RowChangeEventHandler" msprop:Generator_RowDeletedName="TablaSeguro1RowDeleted" msprop:Generator_UserTableName="TablaSeguro1" msprop:Generator_RowChangedName="TablaSeguro1RowChanged" msprop:Generator_RowEvArgName="TablaSeguro1RowChangeEvent" msprop:Generator_RowClassName="TablaSeguro1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Anexo" msprop:Generator_ColumnVarNameInTable="columnAnexo" msprop:Generator_ColumnPropNameInRow="Anexo" msprop:Generator_ColumnPropNameInTable="AnexoColumn" msprop:Generator_UserColumnName="Anexo" minOccurs="0">
@@ -687,7 +687,7 @@ FROM            GEN_Avales INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="HistoriaPersonas" msprop:Generator_TableClassName="HistoriaPersonasDataTable" msprop:Generator_TableVarName="tableHistoriaPersonas" msprop:Generator_TablePropName="HistoriaPersonas" msprop:Generator_RowDeletingName="HistoriaPersonasRowDeleting" msprop:Generator_RowChangingName="HistoriaPersonasRowChanging" msprop:Generator_RowEvHandlerName="HistoriaPersonasRowChangeEventHandler" msprop:Generator_RowDeletedName="HistoriaPersonasRowDeleted" msprop:Generator_UserTableName="HistoriaPersonas" msprop:Generator_RowChangedName="HistoriaPersonasRowChanged" msprop:Generator_RowEvArgName="HistoriaPersonasRowChangeEvent" msprop:Generator_RowClassName="HistoriaPersonasRow">
+        <xs:element name="HistoriaPersonas" msprop:Generator_TableClassName="HistoriaPersonasDataTable" msprop:Generator_TableVarName="tableHistoriaPersonas" msprop:Generator_RowChangedName="HistoriaPersonasRowChanged" msprop:Generator_TablePropName="HistoriaPersonas" msprop:Generator_RowDeletingName="HistoriaPersonasRowDeleting" msprop:Generator_RowChangingName="HistoriaPersonasRowChanging" msprop:Generator_RowEvHandlerName="HistoriaPersonasRowChangeEventHandler" msprop:Generator_RowDeletedName="HistoriaPersonasRowDeleted" msprop:Generator_RowClassName="HistoriaPersonasRow" msprop:Generator_UserTableName="HistoriaPersonas" msprop:Generator_RowEvArgName="HistoriaPersonasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Anexo" msprop:Generator_ColumnVarNameInTable="columnAnexo" msprop:Generator_ColumnPropNameInRow="Anexo" msprop:Generator_ColumnPropNameInTable="AnexoColumn" msprop:Generator_UserColumnName="Anexo">
@@ -744,7 +744,7 @@ FROM            GEN_Avales INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_RowClassName="ClientesRow" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowEvArgName="ClientesRowChangeEvent">
+        <xs:element name="Clientes" msprop:Generator_TableClassName="ClientesDataTable" msprop:Generator_TableVarName="tableClientes" msprop:Generator_TablePropName="Clientes" msprop:Generator_RowDeletingName="ClientesRowDeleting" msprop:Generator_RowChangingName="ClientesRowChanging" msprop:Generator_RowEvHandlerName="ClientesRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientesRowDeleted" msprop:Generator_UserTableName="Clientes" msprop:Generator_RowChangedName="ClientesRowChanged" msprop:Generator_RowEvArgName="ClientesRowChangeEvent" msprop:Generator_RowClassName="ClientesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente">
@@ -841,7 +841,7 @@ FROM            GEN_Avales INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="AvalesPLD" msprop:Generator_TableClassName="AvalesPLDDataTable" msprop:Generator_TableVarName="tableAvalesPLD" msprop:Generator_RowChangedName="AvalesPLDRowChanged" msprop:Generator_TablePropName="AvalesPLD" msprop:Generator_RowDeletingName="AvalesPLDRowDeleting" msprop:Generator_RowChangingName="AvalesPLDRowChanging" msprop:Generator_RowEvHandlerName="AvalesPLDRowChangeEventHandler" msprop:Generator_RowDeletedName="AvalesPLDRowDeleted" msprop:Generator_RowClassName="AvalesPLDRow" msprop:Generator_UserTableName="AvalesPLD" msprop:Generator_RowEvArgName="AvalesPLDRowChangeEvent">
+        <xs:element name="AvalesPLD" msprop:Generator_TableClassName="AvalesPLDDataTable" msprop:Generator_TableVarName="tableAvalesPLD" msprop:Generator_TablePropName="AvalesPLD" msprop:Generator_RowDeletingName="AvalesPLDRowDeleting" msprop:Generator_RowChangingName="AvalesPLDRowChanging" msprop:Generator_RowEvHandlerName="AvalesPLDRowChangeEventHandler" msprop:Generator_RowDeletedName="AvalesPLDRowDeleted" msprop:Generator_UserTableName="AvalesPLD" msprop:Generator_RowChangedName="AvalesPLDRowChanged" msprop:Generator_RowEvArgName="AvalesPLDRowChangeEvent" msprop:Generator_RowClassName="AvalesPLDRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DescripPers" msprop:Generator_ColumnVarNameInTable="columnDescripPers" msprop:Generator_ColumnPropNameInRow="DescripPers" msprop:Generator_ColumnPropNameInTable="DescripPersColumn" msprop:Generator_UserColumnName="DescripPers" minOccurs="0">
